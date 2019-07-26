@@ -6,12 +6,13 @@ import org.springframework.data.annotation.Id;
 
 
 public class Technology {
-
+                                                            
     @Id
     public String id;
 
     public String technologyName;
     public List<String> skillset;
+    private Integer userId;
     
     public Technology() {}
 
@@ -45,4 +46,14 @@ public class Technology {
 	public void setSkillset(List<String> skillset) {
 		this.skillset = skillset;
 	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	
+	
 }

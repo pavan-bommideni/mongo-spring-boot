@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Technology;
 import com.example.demo.model.TechnologyModel;
 //import com.example.demo.model.UserModel;
 import com.example.demo.service.TechnologyService;
@@ -26,9 +29,9 @@ public class TchnologyController {
 		return technologyService.createUser(userModel);
 	}
 	
-	@GetMapping("/test")
-	public String get() {
-		return "Hello";
+	@GetMapping("/technologies")
+	public List<Technology> get() {
+		return technologyService.getTechnologies();
 	}
 
 }
