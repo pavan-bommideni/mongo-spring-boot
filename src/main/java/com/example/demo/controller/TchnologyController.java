@@ -24,8 +24,7 @@ public class TchnologyController {
 	TechnologyService technologyService;
 	
 	@PostMapping("/technologies")
-	public Boolean createUser(@RequestBody TechnologyModel userModel) {
-		System.out.println("Tedst     ");
+	public Boolean create(@RequestBody TechnologyModel userModel) {
 		return technologyService.createUser(userModel);
 	}
 	
