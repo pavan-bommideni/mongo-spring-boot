@@ -1,2 +1,2 @@
-# Spring Boot with Mongo DB
+# Spring Boot App with Mongo DB
   
